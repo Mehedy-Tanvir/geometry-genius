@@ -26,3 +26,29 @@ function calculateRectangleArea() {
   console.log(width, length, area);
   document.getElementById("rectangle-area").innerText = area;
 }
+
+function calculateParallelogramArea() {
+  const base = getInputValue("parallelogram-base");
+  const height = getInputValue("parallelogram-height");
+  const area = base * height;
+  setElementInnerText("parallelogram-area", area);
+}
+
+function calculateEllipseArea() {
+  const radius1 = getInputValue("ellipse-radius1");
+  const radius2 = getInputValue("ellipse-radius2");
+  const area = Math.PI * radius1 * radius2;
+  setElementInnerText("ellipse-area", area.toFixed(2));
+}
+
+// reusable get input value
+function getInputValue(inputId) {
+  const inputField = document.getElementById(inputId);
+  const inputValueText = inputField.value;
+  const inputValue = parseFloat(inputValueText);
+  return inputValue;
+}
+function setElementInnerText(elementId, area) {
+  const elementText = document.getElementById(elementId);
+  elementText.innerText = area;
+}
