@@ -22,22 +22,49 @@
         <div
           class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          <!-- first card -->
+          <!-- triangle card -->
           <div class="card bg-base-100 shadow-xl">
             <figure class="px-10 pt-10">
               <img src="./images/triangle.png" alt="Shoes" class="rounded-xl" />
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title">Triangle</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions">
-                <button class="btn btn-primary bg-[#1090D8] text-white">
-                  Calculate
-                </button>
-              </div>
+              <p>
+                Area (A) = 0.5
+                <img src="./images/multiple-sign.svg" alt="" class="inline" /> b
+                <img src="./images/multiple-sign.svg" alt="" class="inline" /> h
+              </p>
+              <p>
+                <input
+                  type="text"
+                  class="border w-12 px-2 bg-[#F1F1F1] rounded text-xl"
+                  placeholder="b"
+                  id="triangle-base"
+                />
+                <span class="mr-6">cm</span>
+                <input
+                  type="text"
+                  class="border w-12 px-2 bg-[#F1F1F1] rounded text-xl"
+                  placeholder="h"
+                  id="triangle-height"
+                />
+                <span class="mr-4">cm</span>
+              </p>
+              <p class="">
+                Area:
+                <span id="triangle-area" class="font-bold"> </span> cm
+                <sup>2</sup>
+              </p>
+
+              <button
+                class="btn btn-primary bg-[#1090D8] text-white w-full"
+                onclick="calculateTriangleArea()"
+              >
+                Calculate
+              </button>
             </div>
           </div>
-          <!-- second card -->
+          <!-- rectangle card -->
           <div class="card bg-base-100 shadow-xl">
             <figure class="px-10 pt-10">
               <img
@@ -48,12 +75,38 @@
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title">Rectangle</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions">
-                <button class="btn btn-primary bg-[#1090D8] text-white">
-                  Calculate
-                </button>
-              </div>
+              <p>
+                Area (A) = w
+                <img src="./images/multiple-sign.svg" alt="" class="inline" /> l
+              </p>
+              <p>
+                <input
+                  type="text"
+                  class="border w-12 px-2 bg-[#F1F1F1] rounded text-xl"
+                  placeholder="w"
+                  id="rectangle-width"
+                />
+                <span class="mr-6">cm</span>
+                <input
+                  type="text"
+                  class="border w-12 px-2 bg-[#F1F1F1] rounded text-xl"
+                  placeholder="l"
+                  id="rectangle-length"
+                />
+                <span class="mr-4">cm</span>
+              </p>
+              <p class="">
+                Area:
+                <span id="rectangle-area" class="font-bold"> </span> cm
+                <sup>2</sup>
+              </p>
+
+              <button
+                class="btn btn-primary bg-[#1090D8] text-white w-full"
+                onclick="calculateRectangleArea()"
+              >
+                Calculate
+              </button>
             </div>
           </div>
           <!-- third card -->
@@ -129,5 +182,6 @@
       </div>
     </main>
     <footer></footer>
+    <script src="./scripts/area-calculator.js"></script>
   </body>
 </html>
