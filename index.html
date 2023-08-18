@@ -36,14 +36,14 @@
               </p>
               <p>
                 <input
-                  type="text"
+                  type="number"
                   class="border w-12 px-2 bg-[#F1F1F1] rounded text-xl"
                   placeholder="b"
                   id="triangle-base"
                 />
                 <span class="mr-6">cm</span>
                 <input
-                  type="text"
+                  type="number"
                   class="border w-12 px-2 bg-[#F1F1F1] rounded text-xl"
                   placeholder="h"
                   id="triangle-height"
@@ -52,7 +52,7 @@
               </p>
               <p class="">
                 Area:
-                <span id="triangle-area" class="font-bold"> </span> cm
+                <span id="triangle-area" class="font-bold"> 0</span> cm
                 <sup>2</sup>
               </p>
 
@@ -81,14 +81,14 @@
               </p>
               <p>
                 <input
-                  type="text"
+                  type="number"
                   class="border w-12 px-2 bg-[#F1F1F1] rounded text-xl"
                   placeholder="w"
                   id="rectangle-width"
                 />
                 <span class="mr-6">cm</span>
                 <input
-                  type="text"
+                  type="number"
                   class="border w-12 px-2 bg-[#F1F1F1] rounded text-xl"
                   placeholder="l"
                   id="rectangle-length"
@@ -97,7 +97,7 @@
               </p>
               <p class="">
                 Area:
-                <span id="rectangle-area" class="font-bold"> </span> cm
+                <span id="rectangle-area" class="font-bold"> 0</span> cm
                 <sup>2</sup>
               </p>
 
@@ -126,14 +126,14 @@
               </p>
               <p>
                 <input
-                  type="text"
+                  type="number"
                   class="border w-12 px-2 bg-[#F1F1F1] rounded text-xl"
                   placeholder="b"
                   id="parallelogram-base"
                 />
                 <span class="mr-6">cm</span>
                 <input
-                  type="text"
+                  type="number"
                   class="border w-12 px-2 bg-[#F1F1F1] rounded text-xl"
                   placeholder="h"
                   id="parallelogram-height"
@@ -142,7 +142,7 @@
               </p>
               <p class="">
                 Area:
-                <span id="parallelogram-area" class="font-bold"> </span> cm
+                <span id="parallelogram-area" class="font-bold"> 0</span> cm
                 <sup>2</sup>
               </p>
 
@@ -154,35 +154,81 @@
               </button>
             </div>
           </div>
-          <!-- fourth card -->
+          <!-- rhombus card -->
           <div class="card bg-base-100 shadow-xl">
             <figure class="px-10 pt-10">
               <img src="./images/rhombus.png" alt="Shoes" class="rounded-xl" />
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title">Rhombus</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions">
-                <button class="btn btn-primary bg-[#1090D8] text-white">
-                  Calculate
-                </button>
-              </div>
+              <p>Area (A) = 0.5 X d<sub>1</sub> X d<sub>2</sub></p>
+              <p>
+                <input
+                  type="number"
+                  class="border w-12 px-2 bg-[#F1F1F1] rounded text-xl"
+                  placeholder="a"
+                  id="rhombus-side1"
+                />
+                <span class="mr-6">cm</span>
+                <input
+                  type="number"
+                  class="border w-12 px-2 bg-[#F1F1F1] rounded text-xl"
+                  placeholder="b"
+                  id="rhombus-side2"
+                />
+                <span class="mr-4">cm</span>
+              </p>
+              <p class="">
+                Area:
+                <span id="rhombus-area" class="font-bold"> 0</span> cm
+                <sup>2</sup>
+              </p>
+
+              <button
+                class="btn btn-primary bg-[#1090D8] text-white w-full"
+                onclick="calculateRhombusArea()"
+              >
+                Calculate
+              </button>
             </div>
           </div>
 
-          <!-- fifth card -->
+          <!-- pentagon card -->
           <div class="card bg-base-100 shadow-xl">
             <figure class="px-10 pt-10">
               <img src="./images/pentagon.png" alt="Shoes" class="rounded-xl" />
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title">Pentagon</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions">
-                <button class="btn btn-primary bg-[#1090D8] text-white">
-                  Calculate
-                </button>
-              </div>
+              <p>Area (A) = 0.5 X p X b</p>
+              <p>
+                <input
+                  type="number"
+                  class="border w-12 px-2 bg-[#F1F1F1] rounded text-xl"
+                  placeholder="p"
+                  id="p"
+                />
+                <span class="mr-6">cm</span>
+                <input
+                  type="number"
+                  class="border w-12 px-2 bg-[#F1F1F1] rounded text-xl"
+                  placeholder="b"
+                  id="b"
+                />
+                <span class="mr-4">cm</span>
+              </p>
+              <p class="">
+                Area:
+                <span id="pentagon-area" class="font-bold"> 0</span> cm
+                <sup>2</sup>
+              </p>
+
+              <button
+                class="btn btn-primary bg-[#1090D8] text-white w-full"
+                onclick="calculatePentagonArea()"
+              >
+                Calculate
+              </button>
             </div>
           </div>
           <!-- ellipse card -->
@@ -198,14 +244,14 @@
               </p>
               <p>
                 <input
-                  type="text"
+                  type="number"
                   class="border w-12 px-2 bg-[#F1F1F1] rounded text-xl"
                   placeholder="a"
                   id="ellipse-radius1"
                 />
                 <span class="mr-6">cm</span>
                 <input
-                  type="text"
+                  type="number"
                   class="border w-12 px-2 bg-[#F1F1F1] rounded text-xl"
                   placeholder="b"
                   id="ellipse-radius2"
@@ -228,8 +274,9 @@
           </div>
         </div>
         <!-- area calculator -->
-        <div class="w-[400px]">
+        <div class="w-[400px] text-center">
           <div class="text-4xl">Area Calculator</div>
+          <div id="calculation-entry"></div>
         </div>
       </div>
     </main>
